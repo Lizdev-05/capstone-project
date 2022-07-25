@@ -1,3 +1,27 @@
-body{
-  background-color: aqua;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  background-image: url('./images/logo.png');
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 2px solid green;
+}
+
+.right-header,
+.logo {
+  display: flex;
+  list-style-type: none;
+  margin-right: 50px;
+}
+
+.right-header li {
+  margin-left: 16px;
 }
