@@ -1,5 +1,23 @@
-main {
-  height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.3s linear;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header {
@@ -9,13 +27,11 @@ main {
 }
 
 .logo {
-  background-image: url('./images/logo.png');
-  border-radius: 50%;
+  background-image: url('./images/meal-logo.png');
   height: 100px;
   width: 100px;
   background-repeat: no-repeat;
   background-size: contain;
-  border: 2px solid green;
 }
 
 .right-header,
