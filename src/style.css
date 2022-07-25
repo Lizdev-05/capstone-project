@@ -18,20 +18,27 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: rgb(48, 147, 172);
 }
+
+
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+main{
+  height: 100vh;
+}
 
 .logo {
-  background-image: url('./images/meal-logo.png');
+  background-image: url('./images/logo.png');
   height: 100px;
   width: 100px;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-top: 1.5rem;
 }
 
 .right-header,
