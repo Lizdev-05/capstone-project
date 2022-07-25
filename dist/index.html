@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal App</title>
+    <!-- bootstrap -->
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- bootsrap js -->
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <script defer src="/runtime.bundle.js"></script><script defer src="/index.bundle.js"></script></head>
 <body>
@@ -16,17 +23,32 @@
                 <li>Contacts</li>
             </ul>    
     </nav>
+    <div class="slider">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/images/meal1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/meal2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/meal3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
 </header>
 <main>
     <div class="meal-cards">
       <div class="card">
         <div class="card-image">
-          <img src="./images/meal-1.jpg" alt="">
+          <img src="./assets/images/meal1.jpg" alt="">
         </div>
         <div class="card-content">
          <div class="first-part">
           <h2>Meal 1</h2>
-          <span>likes</span>
+          <span><i class="fa-solid fa-heart"></i> likes</span>
          </div>
           <div class="second-part">
             <p>Comment</p>
@@ -37,12 +59,12 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="./images/meal-2.jpg" alt="">
+          <img src="./assets/images/meal2.jpg" alt="">
         </div>
         <div class="card-content">
          <div class="first-part">
           <h2>Meal 2</h2>
-          <span>likes</span>
+          <span><i class="fa-solid fa-heart"></i> likes</span>
          </div>
           <div class="second-part">
             <p>Comment</p>
@@ -53,12 +75,12 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="./images/meal-3.webp" alt="">
+          <img src="./assets/images/meal3.jpg" alt="">
         </div>
         <div class="card-content">
          <div class="first-part">
           <h2>Meal 3</h2>
-          <span>likes</span>
+          <span><i class="fa-solid fa-heart"></i> likes</span>
          </div>
           <div class="second-part">
             <p>Comment</p>
@@ -69,12 +91,12 @@
 
       <div class="card">
         <div class="card-image">
-         <img src="./images/meal-4.jpeg"alt="">
+         <img src="./assets/images/meal1.jpg"alt="">
         </div>
         <div class="card-content">
          <div class="first-part">
           <h2>Meal 4</h2>
-          <span>likes</span>
+          <span><i class="fa-solid fa-heart"></i> likes</span>
          </div>
           <div class="second-part">
             <p>Comment</p>
@@ -84,6 +106,6 @@
       </div>
     </div>
 </main>
-<footer class="footer">CopyRight @ S$L Sensational</footer> 
+<footer class="footer">CopyRight @ S$L Sensation</footer> 
 </body>
 </html>
