@@ -97,7 +97,7 @@ nav {
   font-weight: 600;
 }
 
-.like-part{
+.like-part {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,14 +105,14 @@ nav {
   margin-bottom: 1rem;
 }
 
-
-.like-icon{
+.like-icon {
   cursor: pointer;
   color: goldenrod;
   transition: all 0.3s linear;
   background: none;
   border: none;
 }
+
 .fa-heart {
   margin-right: 0.5rem;
 }
@@ -121,6 +121,7 @@ nav {
   transform: scale(1.5);
   cursor: pointer;
 }
+
 .second-part button {
   font-size: 1.1rem;
   font-weight: 600;
@@ -192,4 +193,3 @@ nav {
     margin-bottom: 0;
   }
 }
-
