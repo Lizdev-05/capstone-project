@@ -6,16 +6,16 @@ const displayMeal = (data) => {
   meal.classList.add('card');
   meal.innerHTML = `
   <div class="card-image">
-          <img src="${data.strMealThumb}" />
+          <img src="${data.strMealThumb}"/>
           </div>
           <div class="card-content">
            <div class="first-part">
             <h2>${data.strMeal}</h2>
-            <span><i class="fa-solid fa-heart"></i>${data.idMeal} likes</span>
+            <span><i class="fa-solid fa-heart"></i>${20} likes</span>
            </div>
             <div class="second-part">
-              <p>Comment</p>
-              <p>Reservation</p>
+            <button>Comment</button>
+            <button>Reservation</button>
             </div>
           </div>
   `;
