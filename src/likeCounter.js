@@ -16,6 +16,10 @@ const likes = () => {
         item_id: item,
       }),
     });
+    fetch(URL_API).then((response) => response.json()).then((data) => {
+      const likeCount = document.querySelector(`.likes-${item}`);
+      likeCount.querySelector('span').textContent = `${data.filter((items) => items.item_id === item)[0].likes} likes`;
+    });
   });
 };
 

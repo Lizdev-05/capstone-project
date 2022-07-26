@@ -11,7 +11,7 @@ const displayMeal = (data) => {
           <div class="card-content">
            <div class="first-part">
             <h2>${data.strMeal}</h2>
-            <div class='like-part'>
+            <div class='like-part likes-${data.idMeal}'>
             <i class="fa-solid fa-heart like-icon" id='${data.idMeal}'></i> 
             <span class='like-count ${data.idMeal}>' id='${data.idMeal}'>0 likes</span>
             </div>
