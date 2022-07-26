@@ -5,8 +5,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-  },
-  devtool: 'inline-source-map',
+  },   
   devServer: {
     static: './dist',
   },
@@ -19,7 +18,6 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: './',
   },
   module: {
     rules: [
@@ -32,8 +30,5 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
-  },
-  optimization: {
-    runtimeChunk: 'single',
-  },
+  }, 
 };
