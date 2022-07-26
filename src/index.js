@@ -11,4 +11,3 @@ import './assets/images/close.svg';
 display();
 const niceMeal = new Meal();
 niceMeal.getMeal();
-niceMeal.popupMeal();
