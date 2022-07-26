@@ -1,4 +1,12 @@
 import './style.css';
+import display from './display.js';
+
+import './assets/images/meal1.jpg';
+import './assets/images/meal2.jpg';
+import './assets/images/meal3.jpg';
+import './assets/images/meal4.jpg';
+
+display();
 
 // function  getmeals() {
 //   fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/tLLmHQIVXj0SbcfXAHdh/scores`)
@@ -47,6 +55,4 @@ seeMeals.forEach((item) => {
     document.getElementById('meals-popup').appendChild(modalContainer);
   });
 });
-
-
 
