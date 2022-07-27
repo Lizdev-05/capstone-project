@@ -1,8 +1,8 @@
 import './style.css';
-import display from './display.js';
-import { likes, displayLikes } from './likeCounter.js';
+import display from './modules/display.js';
+import { likes, displayLikes } from './modules/likeCounter.js';
 import Meal from './modules/meal-Class.js';
-import menuCounter from './itemCounter.js';
+import menuCounter from './modules/itemCounter.js';
 
 import './assets/images/meal1.jpg';
 import './assets/images/meal2.jpg';
