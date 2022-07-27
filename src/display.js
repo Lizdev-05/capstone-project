@@ -17,7 +17,7 @@ const displayMeal = (data) => {
             </div>
            </div>
             <div class="second-part">
-            <button>Comment</button>
+            <button class="sea-meal">Comment</button>
             <button>Reservation</button>
             </div>
           </div>
@@ -33,5 +33,4 @@ const display = async () => {
   });
 };
 
-display();
 export default display;
