@@ -21,11 +21,12 @@ export default class Meal {
     seeMeals.forEach((item, index) => {
       item.addEventListener('click', () => {
         const modalContainer = document.createElement('section');
+        modalContainer.id = `${index}`;
         modalContainer.className = 'modal-container';
         modalContainer.innerHTML = `
       <div><img class="close" src="./assets/images/close.svg" alt="close-button"></div> 
        <div class="card-image">
-       <img src="${data.meals[index].strMealThumb}"/>
+       <img src="${data.meals[index].strMealThumb}">
        </div>
        <div class="card-content">
         <div class="first-part">
@@ -33,11 +34,52 @@ export default class Meal {
          <span>Order Number: ${data.meals[index].idMeal}</span>
          </div>       
         </div>
-        <div id=${index}></div>
+        <h2>Comment(count)</h2>
+        <div id="comment${index}"></div
+        <h2>Add a comment</h2>
+        <form>        
+        <input type="text" id="name${index}" placeholder="Your name"><br>
+        <textarea name="text-area" id="text${index}" class="text-area" placeholder="Your insights" rows="5" maxlength="500" required></textarea><br>
+        </form>
+        <button class="comment-btn" type="button">Comment</button>
        `;
         this.mealContainer.appendChild(modalContainer);
+        const comment = document.querySelectorAll('.comment-btn');
+        this.addCommentOnPopup(comment, index);
         this.closeMeal(modalContainer);
       });
+    });
+  }
+
+  addCommentOnPopup = (comment, index) => {
+    comment.forEach((item) => {
+      item.addEventListener('click', () => {
+        const commentId = document.getElementById(`comment${index}`);
+        const nameValue = document.getElementById(`name${index}`).value;
+        const commentValue = document.getElementById(`text${index}`).value;
+        const arrayData = [];
+        if (nameValue === '' || commentValue === '') return;
+
+        const commentData = {
+          item_id: arrayData.length,
+          username: nameValue,
+          comment: commentValue,
+        };
+        const commentString = JSON.stringify(commentData);
+        const data = JSON.parse(commentString);
+        arrayData.push(data);
+        this.displayComment(arrayData, commentId);
+      });
+    });
+  }
+
+  displayComment = (arrayData, commentId) => {
+    arrayData.forEach((item) => {
+      const commentdiv = document.createElement('div');
+      commentdiv.innerHTML = `
+       <div>${item.username}: ${item.comment}</div>     
+    `;
+      commentId.appendChild(commentdiv);
     });
   }
 
@@ -50,6 +92,7 @@ export default class Meal {
       });
     });
   }
+
   // Add Comments
   addComment = async (data) => {
     const response = await fetch(this.INV_API_URL, {
@@ -57,27 +100,16 @@ export default class Meal {
       headers: {
         'Content-type': 'application/json',
       },
-      body: JSON.stringify(data),                  
-    });     
-    return response;     
-  }
-//  Get comments
-  getComment = async () => {
-    const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/n9t5YbrpQrNNAecac7tn/comments?item_id=item1');
-    const comments  = await response.text().catch((error) => new Error(error));
-    console.log(comments); 
-    this.displayComments(comments);   
+      body: JSON.stringify(data),
+    });
+    return response;
   }
 
-  //  display comment
-   displayComments(data) {
-    let commentContainer = '';
-    data.forEach((item) => {
-      const commentContent = `
-    <div>${item.creation_date} ${item.username}: ${item.comment}</div>       
-    `;
-    commentContainer += commentContent;
-    });
-    document.getElementById('comment').innerHTML = bookContainer;
+  //  Get comments
+  getComment = async () => {
+    const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/n9t5YbrpQrNNAecac7tn/comments?item_id=item1');
+    const comments = await response.text().catch((error) => new Error(error));
+    // this.displayComments(comments);
+    return comments;
   }
 }
