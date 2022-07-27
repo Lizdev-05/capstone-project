@@ -23,4 +23,12 @@ const likes = () => {
   });
 };
 
-export default likes;
+const displayLikes = () => {
+  fetch(URL_API).then((response) => response.json()).then((data) => {
+    data.forEach((item) => {
+      const likeCount = document.querySelector(`.likes-${item.item_id}`);
+      likeCount.querySelector('span').textContent = `${item.likes} likes`;
+    });
+  });
+};
+export { likes, displayLikes };

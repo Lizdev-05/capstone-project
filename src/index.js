@@ -1,7 +1,8 @@
 import './style.css';
 import display from './display.js';
-import likes from './likeCounter.js';
+import { likes, displayLikes } from './likeCounter.js';
 import Meal from './modules/meal-Class.js';
+import menuCounter from './itemCounter.js';
 
 import './assets/images/meal1.jpg';
 import './assets/images/meal2.jpg';
@@ -14,3 +15,5 @@ likes();
 const niceMeal = new Meal();
 niceMeal.getMeal();
 niceMeal.getComment();
+menuCounter();
+displayLikes();
