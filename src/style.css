@@ -173,7 +173,6 @@ nav {
 
 .modal-container {
   overflow-y: auto;
-  margin: 0;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -181,16 +180,15 @@ nav {
   right: 0;
   background-color: goldenrod;
   transition: 0.4s;
-  padding: 16px;
   z-index: 1;
   padding: 1rem;
   border-radius: 1rem;
   width: 100%;
   max-width: 600px;
   margin: 1rem auto;
-  }
+}
 
-.modalContainer img{
+.modalContainer img {
   width: 80%;
   height: 30%;
   object-fit: fill;
@@ -199,6 +197,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .hide {
   display: none;
 }
