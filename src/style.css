@@ -194,9 +194,34 @@ nav {
   float: right;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1120px) {
+  .card .card-content {
+    padding: 0 0.5rem;
+  }
+  .meal-cards{
+    padding: 0 2rem;
+  }
+ .card-content{
+   width: 100%;
+ }
+  .first-part,
+  .second-part {
+    flex-direction: column;
+  }
+
+  .second-part button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .like-part {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 900px) {
   .meal-cards {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 5rem;
   }
 
   .card .card-content {
