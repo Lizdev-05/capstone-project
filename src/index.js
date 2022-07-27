@@ -1,6 +1,7 @@
 import './style.css';
 import display from './display.js';
 import Meal from './modules/meal-Class.js';
+import itemCounter from './itemCounter.js';
 
 import './assets/images/meal1.jpg';
 import './assets/images/meal2.jpg';
@@ -11,3 +12,4 @@ import './assets/images/close.svg';
 display();
 const niceMeal = new Meal();
 niceMeal.getMeal();
+itemCounter();
