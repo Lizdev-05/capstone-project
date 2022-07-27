@@ -8,21 +8,10 @@ This is the second Microverse capstone project meant to summarize all the conten
 ## Project requirements 
 Please find project requirements [here](https://github.com/microverseinc/curriculum-javascript/blob/main/group-capstone/js_capstone.md). 
 
-## Screenshot
-![Screenshot from 2022-03-10 21-58-21](https://user-images.githubusercontent.com/88809610/157794357-bf25c921-3ed3-4b3d-b94b-72b9f19fc528.png)
-
-
-![Screenshot from 2022-03-10 22-00-05](https://user-images.githubusercontent.com/88809610/157794157-066ad559-4b12-43fe-b556-f36abdb8aafa.png)
-
-![Screenshot from 2022-03-11 10-57-28](https://user-images.githubusercontent.com/88809610/157902931-c2f4570b-b98e-4f99-9a49-ec078688b82e.png)
-
-
 ## Project presentation
 
 Please take a look at the video below
-
-https://user-images.githubusercontent.com/88809610/157913162-ce2e6c92-0fe0-4582-951f-59f81f2703f6.mp4
-
+<!-- The zoom video -->
 
 ## How it works
 
@@ -35,7 +24,7 @@ The Meal DB web application allows users to like, comment, and make a reservatio
 
 ## Live Demo
 
-Click [here](https://behnam1369.github.io/Capstone2/) to see the live demo.
+
 
 
 ## Getting started
@@ -59,7 +48,7 @@ In order to install a local version of this project and please do the following 
 - Install the latest version of any code editor.
 - install the latest version of GIT.
 - open your terminal
-- Go to the [repository](https://github.com/Behnam1369/Capstone2)  and clone it with `git clone git@github.com:Behnam1369/Capstone2.git' .
+- Go to the [repository](https://github.com/Lizdev-05/capstone-project)  and clone it with `git clone git@github.com:Behnam1369/Capstone2.git' .
 - open the repository cloned with `cd Capstone2`
 - if your code editor is VsCode type `code .`
 - Install webpack with: `npm install --save-dev webpack webpack-cli`
@@ -80,17 +69,14 @@ In order to install a local version of this project and please do the following 
 
 ## Authors
 
-👤 **Hemerson Foreste**
 
-- GitHub: [@ForHemer](https://github.com/ForHemer)
-- Twitter: [@HemersonForeste](https://twitter.com/HemersonForeste)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hemerson-foreste-890685197)
+👤 **Ojesanmi Elizabeth Oyin**
 
-👤 **Behnam Aghaali**
+- GitHub: [@githubhandle](https://github.com/Lizdev-05)
 
-- GitHub: [@Behnam1369](https://github.com/Behnam1369)
-- Twitter: [@behnamagh1369](https://twitter.com/behnamagh1369)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/behnam-aghaali-62561375/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a)
+
+👤 **
 
 ## Contributing
 
