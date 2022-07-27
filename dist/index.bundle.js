@@ -146,7 +146,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst API_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=British';\nconst itemCounter = document.querySelector('.item-counter');\n\nconst menuCounter = () => {\n  fetch(API_URL)\n    .then((response) => response.json())\n    .then((data) => {\n      const meal = data.meals;\n      const count = meal.length;\n      itemCounter.innerHTML = `(${count})`;\n    });\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuCounter);\nmenuCounter();\n\n\n//# sourceURL=webpack://web-package/./src/itemCounter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/**\n * @jest-environment jsdom\n */\n\nconst API_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=British';\nconst itemCounter = document.querySelector('.item-counter');\n\nconst menuCounter = () => {\n  fetch(API_URL)\n    .then((response) => response.json())\n    .then((data) => {\n      const meal = data.meals;\n      const count = meal.length;\n      itemCounter.innerHTML = `(${count})`;\n    });\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuCounter);\nmenuCounter();\n\n\n//# sourceURL=webpack://web-package/./src/itemCounter.js?");
 
 /***/ }),
 
