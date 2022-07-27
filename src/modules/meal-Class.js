@@ -2,6 +2,7 @@ export default class Meal {
   // Initialization
   constructor() {
     this.API_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=British';
+    this.INV_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/n9t5YbrpQrNNAecac7tn/comments';
     this.mealContainer = document.getElementById('meals-popup');
   }
 
@@ -32,6 +33,7 @@ export default class Meal {
          <span>Order Number: ${data.meals[index].idMeal}</span>
          </div>       
         </div>
+        <div id=${index}></div>
        `;
         this.mealContainer.appendChild(modalContainer);
         this.closeMeal(modalContainer);
@@ -47,5 +49,35 @@ export default class Meal {
         modalContainer.classList.add('hide');
       });
     });
+  }
+  // Add Comments
+  addComment = async (data) => {
+    const response = await fetch(this.INV_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(data),                  
+    });     
+    return response;     
+  }
+//  Get comments
+  getComment = async () => {
+    const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/n9t5YbrpQrNNAecac7tn/comments?item_id=item1');
+    const comments  = await response.text().catch((error) => new Error(error));
+    console.log(comments); 
+    this.displayComments(comments);   
+  }
+
+  //  display comment
+   displayComments(data) {
+    let commentContainer = '';
+    data.forEach((item) => {
+      const commentContent = `
+    <div>${item.creation_date} ${item.username}: ${item.comment}</div>       
+    `;
+    commentContainer += commentContent;
+    });
+    document.getElementById('comment').innerHTML = bookContainer;
   }
 }
