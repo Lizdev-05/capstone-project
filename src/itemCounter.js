@@ -1,14 +1,14 @@
-const menu = document.querySelector('.menu');
-const items = document.querySelectorAll('.card');
+const API_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=British';
+const itemCounter = document.querySelector('.item-counter');
 
-const itemCounter = () => {
-  let counter = 0;
-  items.forEach(() => {
-    counter += 1;
-  });
-  menu.innerHTML = `${counter} items`;
+const menuCounter = () => {
+  fetch(API_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      const meal = data.meals;
+      const count = meal.length;
+      itemCounter.innerHTML = `(${count})`;
+    });
 };
-
-itemCounter();
-
-export default itemCounter;
+export default menuCounter;
+menuCounter();
