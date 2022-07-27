@@ -31,5 +31,4 @@ const displayLikes = () => {
     });
   });
 };
-
 export { likes, displayLikes };
