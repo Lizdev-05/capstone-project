@@ -32,16 +32,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   color: goldenrod;
-}
-
-main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0 5rem;
 }
 
 .logo {
@@ -74,6 +66,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   margin-top: 6rem;
+  padding: 0 5rem;
 }
 
 .card .card-image {
@@ -99,14 +92,34 @@ main {
   margin-bottom: 1rem;
 }
 
-.first-part span {
+.like-part span {
   font-size: 1rem;
   font-weight: 600;
+}
+
+.like-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
   margin-bottom: 1rem;
+}
+
+.like-icon {
+  cursor: pointer;
+  color: goldenrod;
+  transition: all 0.3s linear;
+  background: none;
+  border: none;
 }
 
 .fa-heart {
   margin-right: 0.5rem;
+}
+
+.fa-heart:hover {
+  transform: scale(1.5);
+  cursor: pointer;
 }
 
 .second-part button {
@@ -119,6 +132,11 @@ main {
   border: 1px solid var(--Dark-Gray);
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.second-part button:hover {
+  background-color: goldenrod;
+  color: var(--White);
 }
 
 .carousel-item img {
@@ -174,4 +192,28 @@ main {
   margin-bottom: 16px;
   padding-left: 0;
   float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .meal-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card .card-content {
+    padding: 0 0.5rem;
+  }
+
+  .first-part,
+  .second-part {
+    flex-direction: column;
+  }
+
+  .second-part button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .like-part {
+    margin-bottom: 0;
+  }
 }
