@@ -195,15 +195,18 @@ nav {
 }
 
 @media screen and (max-width: 1120px) {
+  .card-content {
+    width: 100%;
+  }
+
   .card .card-content {
     padding: 0 0.5rem;
   }
-  .meal-cards{
+
+  .meal-cards {
     padding: 0 2rem;
   }
- .card-content{
-   width: 100%;
- }
+
   .first-part,
   .second-part {
     flex-direction: column;
@@ -218,6 +221,7 @@ nav {
     margin-bottom: 0;
   }
 }
+
 @media screen and (max-width: 900px) {
   .meal-cards {
     grid-template-columns: repeat(2, 1fr);
