@@ -1,4 +1,7 @@
-// import menuCounter from '../itemCounter.js';
+/**
+ * @jest-environment jsdom
+ */
+
 const fetchMock = require('fetch-mock');
 
 describe('async fetch', () => {
