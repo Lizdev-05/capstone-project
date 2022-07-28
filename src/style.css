@@ -238,6 +238,21 @@ nav {
 }
 
 @media screen and (max-width: 900px) {
+  /* #comment {
+  overflow-y: auto;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  transition: 0.4s;
+  padding: 16px;
+} */
+}
+
+@media screen and (max-width: 768px) {
   .meal-cards {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 5rem;
