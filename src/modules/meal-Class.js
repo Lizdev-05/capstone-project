@@ -3,7 +3,7 @@ export default class Meal {
   constructor() {
     this.API_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=British';
     this.INV_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/n9t5YbrpQrNNAecac7tn/comments';
-    this.mealContainer = document.getElementById('meals-popup');
+    this.mealPopup = document.getElementById('meals-popup');
   }
 
   // Get meals from Api, throw error if promise was not resoved
@@ -17,13 +17,13 @@ export default class Meal {
 
   //  Function that display meal when comment button is cloked
   popupMeal = (data) => {
-    const seeMeals = document.querySelectorAll('.sea-meal');
-    seeMeals.forEach((item, index) => {
+    const selectAllMeal = document.querySelectorAll('.sea-meal');
+    selectAllMeal.forEach((item, index) => {
       item.addEventListener('click', () => {
-        const modalContainer = document.createElement('section');
-        modalContainer.id = `${index}`;
-        modalContainer.className = 'modal-container';
-        modalContainer.innerHTML = `
+        const mealContainer = document.createElement('section');
+        mealContainer.className = 'modal-container';
+        mealContainer.id = `${index}`;
+        mealContainer.innerHTML = `
       <div><img class="close" src="./assets/images/close.svg" alt="close-button"></div> 
        <div class="card-image">
        <img src="${data.meals[index].strMealThumb}">
@@ -33,54 +33,62 @@ export default class Meal {
          <h2>${data.meals[index].strMeal}</h2>      
          <span>Order Number: ${data.meals[index].idMeal}</span>
          </div>       
-        </div>
-        <h2>Comment(count)</h2>
-        <div id="comment${index}"></div
+        </div>                     
+        <div id="comment${index}"></div>
         <h2>Add a comment</h2>
-        <form>        
+        <form id="form${index}">        
         <input type="text" id="name${index}" placeholder="Your name"><br>
         <textarea name="text-area" id="text${index}" class="text-area" placeholder="Your insights" rows="5" maxlength="500" required></textarea><br>
         </form>
         <button class="comment-btn" type="button">Comment</button>
        `;
-        this.mealContainer.appendChild(modalContainer);
+        this.mealPopup.appendChild(mealContainer);
+        const commentId = document.getElementById(`comment${index}`);
+        this.getComment(commentId, index);
         const comment = document.querySelectorAll('.comment-btn');
         this.addCommentOnPopup(comment, index);
-        this.closeMeal(modalContainer);
+        this.closeMeal(mealContainer);
       });
     });
   }
 
-  addCommentOnPopup = (comment, index) => {
-    comment.forEach((item) => {
-      item.addEventListener('click', () => {
+  //  Add comment on Popup
+  addCommentOnPopup = async (comments, index) => {
+    comments.forEach((item) => {
+      item.addEventListener('click', (event) => {
+        event.preventDefault();
         const commentId = document.getElementById(`comment${index}`);
         const nameValue = document.getElementById(`name${index}`).value;
         const commentValue = document.getElementById(`text${index}`).value;
-        const arrayData = [];
+        const formId = document.getElementById(`form${index}`);
         if (nameValue === '' || commentValue === '') return;
 
         const commentData = {
-          item_id: arrayData.length,
+          item_id: `item${index}`,
           username: nameValue,
           comment: commentValue,
         };
         const commentString = JSON.stringify(commentData);
         const data = JSON.parse(commentString);
-        arrayData.push(data);
-        this.displayComment(arrayData, commentId);
+        this.addComment(data);
+        this.getComment(commentId, index);
+        formId.reset();
       });
     });
   }
 
-  displayComment = (arrayData, commentId) => {
-    arrayData.forEach((item) => {
-      const commentdiv = document.createElement('div');
-      commentdiv.innerHTML = `
-       <div>${item.username}: ${item.comment}</div>     
+  displayComment = (commentData, commentId) => {
+    let commentContainer = '';
+    const commentCount = document.createElement('div');
+    commentCount.innerHTML = `Comment(${commentData.length})`;
+    commentData.forEach((item) => {
+      const commentContent = `      
+       <div>${item.creation_date} ${item.username}: ${item.comment}</div>     
     `;
-      commentId.appendChild(commentdiv);
+      commentContainer += commentContent;
     });
+    commentId.innerHTML = commentContainer;
+    commentId.insertBefore(commentCount, commentId.children[0]);
   }
 
   // close popup when the close button is cliked
@@ -106,10 +114,12 @@ export default class Meal {
   }
 
   //  Get comments
-  getComment = async () => {
-    const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/n9t5YbrpQrNNAecac7tn/comments?item_id=item1');
+  getComment = async (commentId, index) => {
+    const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/n9t5YbrpQrNNAecac7tn/comments?item_id=item${index}`);
     const comments = await response.text().catch((error) => new Error(error));
-    // this.displayComments(comments);
-    return comments;
+    const commentsData = JSON.parse(comments);
+    if (commentsData !== null) {
+      this.displayComment(commentsData, commentId);
+    }
   }
 }

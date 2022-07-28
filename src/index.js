@@ -12,8 +12,7 @@ import './assets/images/close.svg';
 
 display();
 likes();
-const niceMeal = new Meal();
-niceMeal.getMeal();
-niceMeal.getComment();
 menuCounter();
 displayLikes();
+const niceMeal = new Meal();
+niceMeal.getMeal();
