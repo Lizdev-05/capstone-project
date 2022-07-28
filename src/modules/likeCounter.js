@@ -29,6 +29,6 @@ const displayLikes = () => {
       const likeCount = document.querySelector(`.likes-${item.item_id}`);
       likeCount.querySelector('span').textContent = `${item.likes} likes`;
     });
-  });
+  }).catch((error) => error);
 };
 export { likes, displayLikes };
