@@ -29,7 +29,7 @@ body {
   background-color: var(--Very-Dark-Blue);
 }
 
-.global{
+.global {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -58,7 +58,15 @@ nav {
   list-style-type: none;
 }
 
-.right-header li a{
+.footer a,
+footer p {
+  color: goldenrod;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.right-header li a {
   margin-left: 16px;
   color: goldenrod;
   text-decoration: none;
@@ -103,7 +111,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:  0.5rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -172,24 +180,18 @@ nav {
   height: 45rem;
 }
 
-.footer{
+.footer {
   background-color: var(--Dark-Blue);
   color: goldenrod;
 }
 
-.footer a, footer p{
-  color: goldenrod;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-.copyright{
+.copyright {
   background-color: var(--Very-Dark-Blue);
   text-align: center;
   padding-top: 1.5rem;
 }
 
-.footer-content{
+.footer-content {
   background-color: var(--Dark-Blue);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -203,18 +205,22 @@ nav {
   padding: 1rem;
 }
 
-.sl img{
+.sl img {
   height: 40%;
   width: 70%;
 }
 
-.address span, .more-info span, .open-hours span{
-  display:block;
+.address span,
+.more-info span,
+.open-hours span {
+  display: block;
   font-size: 1rem;
   font-weight: 600;
 }
 
-.address h2, .more-info h2, .open-hours h2{
+.address h2,
+.more-info h2,
+.open-hours h2 {
   font-size: 1.1rem;
   font-weight: 800;
   text-decoration: underline;
@@ -302,7 +308,7 @@ nav {
 } */
 }
 
-@media (min-width:650px) and (max-width:835px){
+@media (min-width: 650px) and (max-width: 835px) {
   .meal-cards {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 3rem;
@@ -326,26 +332,29 @@ nav {
     margin-bottom: 0;
   }
 
-  .footer-content{
+  .footer-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  
-.sl, .address, .open-hours, .more-info{
-  margin-bottom: 2rem;
-}
+  .sl,
+  .address,
+  .open-hours,
+  .more-info {
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
-  body{
+  body {
     width: 100%;
     max-width: 100%;
   }
-  nav
-  .display-none{
+
+  nav .display-none {
     display: none;
   }
+
   .meal-cards {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 5%;
@@ -371,17 +380,17 @@ nav {
 
   .carousel-item {
     height: 20rem;
-
   }
 
-  .footer-content{
-   display: flex;
+  .footer-content {
+    display: flex;
     flex-direction: column;
   }
 
-  
-.sl, .address, .open-hours, .more-info{
-  margin-bottom: 2rem;
+  .sl,
+  .address,
+  .open-hours,
+  .more-info {
+    margin-bottom: 2rem;
+  }
 }
-}
-
