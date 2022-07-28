@@ -14,5 +14,6 @@ display();
 likes();
 const niceMeal = new Meal();
 niceMeal.getMeal();
+niceMeal.getComment();
 menuCounter();
 displayLikes();
