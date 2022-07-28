@@ -15,6 +15,7 @@
   box-sizing: border-box;
   outline: none;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.3s linear;
   font-family: 'Nunito Sans', sans-serif;
 }
@@ -28,12 +29,18 @@ body {
   background-color: var(--Very-Dark-Blue);
 }
 
+.global {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: goldenrod;
-  padding: 0 8rem;
+  padding: 0 1rem;
 }
 
 .logo {
@@ -42,38 +49,41 @@ nav {
   width: 100px;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .right-header,
 .logo {
   display: flex;
   list-style-type: none;
-  margin-right: 50px;
 }
 
-.right-header li {
+.footer a,
+footer p {
+  color: goldenrod;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.right-header li a {
   margin-left: 16px;
   color: goldenrod;
-}
-
-.footer {
-  text-align: center;
+  text-decoration: none;
 }
 
 .meal-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
   margin-top: 6rem;
-  padding: 0 8rem;
 }
 
 .card .card-image {
   background-color: rgb(20, 13, 78);
   height: 13rem;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,12 +93,11 @@ nav {
   border-radius: 0.5rem;
   background-color: var(--Dark-Blue);
   box-shadow: 5px 5px 10px rgb(43, 73, 100);
-  padding: 1rem;
-  border: 1px solid rgb(43, 73, 100);
+  border: 1px solid rgb(85, 120, 150);
 }
 
 .first-part h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
@@ -102,7 +111,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -115,11 +124,11 @@ nav {
 }
 
 .fa-heart {
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
 }
 
 .fa-heart:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   cursor: pointer;
 }
 
@@ -169,6 +178,53 @@ nav {
 
 .carousel-item {
   height: 45rem;
+}
+
+.footer {
+  background-color: var(--Dark-Blue);
+  color: goldenrod;
+}
+
+.copyright {
+  background-color: var(--Very-Dark-Blue);
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.footer-content {
+  background-color: var(--Dark-Blue);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  align-items: center;
+  color: goldenrod;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.sl img {
+  height: 40%;
+  width: 70%;
+}
+
+.address span,
+.more-info span,
+.open-hours span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.address h2,
+.more-info h2,
+.open-hours h2 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .modal-container {
@@ -252,10 +308,10 @@ nav {
 } */
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 650px) and (max-width: 835px) {
   .meal-cards {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 5rem;
+    padding: 0 3rem;
   }
 
   .card .card-content {
@@ -274,5 +330,67 @@ nav {
 
   .like-part {
     margin-bottom: 0;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sl,
+  .address,
+  .open-hours,
+  .more-info {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  nav .display-none {
+    display: none;
+  }
+
+  .meal-cards {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 5%;
+  }
+
+  .card .card-content {
+    padding: 0 0.5rem;
+  }
+
+  .first-part,
+  .second-part {
+    flex-direction: column;
+  }
+
+  .second-part button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .like-part {
+    margin-bottom: 0;
+  }
+
+  .carousel-item {
+    height: 20rem;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sl,
+  .address,
+  .open-hours,
+  .more-info {
+    margin-bottom: 2rem;
   }
 }
