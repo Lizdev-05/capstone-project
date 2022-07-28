@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <script defer src="/index.bundle.js"></script></head>
 <body>
+  <div class="global">
     <header>
         <nav class="header">
             <div class="logo"></div>
             <ul class="right-header">
-                <li>Home</li>
-                <li>Menu <span class="item-counter"></span></li>
-                <li>Contacts</li>
+                <li><a href="#">Home</a></li>
+                <li class=""><a href="#meal-cards">Menu</a><span class="item-counter"></span></li>
+                <li  class="display-none"><a href="#contact">Contacts</a></li>
             </ul>    
     </nav>
     <div class="slider">
@@ -34,15 +35,55 @@
           <div class="carousel-item">
             <img src="./assets/images/meal3.jpg" class="d-block" alt="...">
           </div>
+          <div class="carousel-item">
+            <img src="./assets/images/meal5.jpg" class="d-block" alt="...">
+          </div>
         </div>
       </div>
     </div>
 </header>
-<main>
+<main id="meals-popup">
+    <div class="meal-cards" id="meal-cards">
+    </div>       
     <div class="meal-cards">
     </div>
-    <section id="meals-popup"></section>       
+          
 </main>
-<footer class="footer">CopyRight @ S$L Sensation</footer> 
+</div>
+<footer class="footer">
+ <div class="footer-content">
+  <div class="sl">
+    <img src="./assets/images/S&L-logo.png" alt="">
+  </div>
+
+  <div class="address">
+    <h2>Adress</h2>
+    <span>11 Adzope Crescent, off Kumasi Crescent,</span>
+    <span>  Wuse 2 Abuja Nigeria</span>
+    <span>Tel: +2348067044332</span>
+    <span>Email: Contact@gmail.com</span>
+  </div>
+
+  <div class="open-hours">
+    <h2>Open Hours</h2>
+    <span>Monday-Sunday</span>
+    <span>Lunch: 12PM – 2PM</span>
+    <span>Dinner: 6PM – 10PM</span>
+    <span>Happy Hours: 4PM – 6PM</span>
+  </div>
+   
+  <div class="more-info">
+    <h2>More Info</h2>
+    <span>Get in touch</span>
+    <span>Privacy Policy</span>
+    <span><a href="https://github.com/Lizdev-05">Oyinlade's github</a></span>
+     <span><a href="">https://github.com/stephnna</a>Stephen's github</span>
+    
+  </div>
+ </div>
+<div class="copyright">
+  <p> Copyright @ Ojesanmi Oyinlade & Stephen Ezea`</p>
+</div>
+</footer> 
 </body>
 </html>

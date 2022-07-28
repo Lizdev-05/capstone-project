@@ -47,7 +47,7 @@ export default class Meal {
         this.getComment(commentId, index);
         const comment = document.querySelectorAll('.comment-btn');
         this.addCommentOnPopup(comment, index);
-        this.closeMeal(mealContainer);
+        this.closeMeal(index);
       });
     });
   }
@@ -92,11 +92,11 @@ export default class Meal {
   }
 
   // close popup when the close button is cliked
-  closeMeal = (modalContainer) => {
+  closeMeal = (index) => {
     const closeBtn = document.querySelectorAll('.close');
-    closeBtn.forEach((el) => {
-      el.addEventListener('click', () => {
-        modalContainer.classList.add('hide');
+    closeBtn.forEach((item) => {
+      item.addEventListener('click', () => {
+        document.getElementById(`${index}`).remove();       
       });
     });
   }
@@ -118,7 +118,7 @@ export default class Meal {
     const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/n9t5YbrpQrNNAecac7tn/comments?item_id=item${index}`);
     const comments = await response.text().catch((error) => new Error(error));
     const commentsData = JSON.parse(comments);
-    if (commentsData !== null) {
+    if (commentsData.error === undefined) {
       this.displayComment(commentsData, commentId);
     }
   }
