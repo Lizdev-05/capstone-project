@@ -9,6 +9,7 @@ import './assets/images/meal2.jpg';
 import './assets/images/meal3.jpg';
 import './assets/images/meal4.jpg';
 import './assets/images/meal5.jpg';
+import './assets/images/meal-pic.png';
 import './assets/images/close.svg';
 
 display();
