@@ -11,7 +11,7 @@ Please find project requirements [here](https://github.com/microverseinc/curricu
 
 ## Project presentation
 ## Screenshot
-![Screenshot from 2022-03-10 21-58-21](https://drive.google.com/file/d/1AqbGCrLiYnt1x2xYAdnPxAuN1GhgcpbZ/view?usp=sharing)
+![screenshot](meal-pic.png)
 Please take a look at the video below
 <!-- The zoom video -->
 
@@ -26,7 +26,7 @@ The Meal DB web application allows users to like, comment, and make a reservatio
 
 ## Live Demo
 
-[Live demo here]('https://lizdev-05.github.io/capstone-project/')
+[Live demo here](https://lizdev-05.github.io/capstone-project/)
 
 
 ## Getting started
