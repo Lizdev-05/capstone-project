@@ -265,6 +265,29 @@ footer p {
   float: right;
 }
 
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.comment-btn {
+  background-color: var(--Very-Dark-Blue);
+  color: var(--White);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Dark-Gray);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(87, 85, 85, 0.1);
+}
+
+.comment-btn:hover {
+  background-color: goldenrod;
+  color: var(--White);
+}
+
 @media screen and (max-width: 1120px) {
   .card-content {
     width: 100%;
@@ -291,21 +314,6 @@ footer p {
   .like-part {
     margin-bottom: 0;
   }
-}
-
-@media screen and (max-width: 900px) {
-  /* #comment {
-  overflow-y: auto;
-  margin: 0;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  transition: 0.4s;
-  padding: 16px;
-} */
 }
 
 @media (min-width: 650px) and (max-width: 835px) {
