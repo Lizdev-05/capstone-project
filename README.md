@@ -1,5 +1,5 @@
 # The Meal DB
-The Meal DB web application displays a list of meals that were provided by an external [API](https://www.themealdb.com/api/json/v1/1/filter.php?a=chinese). The users can like a meal, leave some comments or make a reservation, in these cases an involvement API was used.
+The Meal DB web application displays a list of meals that were provided by an external [API](https://www.themealdb.com/api/json/v1/1/filter.php?a=British). The users can like a meal, leave some comments or make a reservation, in these cases an involvement API was used.
 
 N.B. The reservation functions are not implemented because there are just two in the group.
 
