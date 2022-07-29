@@ -47,7 +47,7 @@ export default class Meal {
         this.getComment(commentId, index);
         const comment = document.querySelectorAll('.comment-btn');
         this.addCommentOnPopup(comment, index);
-        this.closeMeal(mealContainer);
+        this.closeMeal(index);
       });
     });
   }
@@ -70,8 +70,7 @@ export default class Meal {
         };
         const commentString = JSON.stringify(commentData);
         const data = JSON.parse(commentString);
-        this.addComment(data);
-        this.getComment(commentId, index);
+        this.addComment(data, commentId, index);
         formId.reset();
       });
     });
@@ -83,7 +82,7 @@ export default class Meal {
     commentCount.innerHTML = `Comment(${commentData.length})`;
     commentData.forEach((item) => {
       const commentContent = `      
-       <div>${item.creation_date} ${item.username}: ${item.comment}</div>     
+       <div class="comment-container">${item.creation_date}<br>${item.username}: ${item.comment}</div>     
     `;
       commentContainer += commentContent;
     });
@@ -92,17 +91,17 @@ export default class Meal {
   }
 
   // close popup when the close button is cliked
-  closeMeal = (modalContainer) => {
+  closeMeal = (index) => {
     const closeBtn = document.querySelectorAll('.close');
-    closeBtn.forEach((el) => {
-      el.addEventListener('click', () => {
-        modalContainer.classList.add('hide');
+    closeBtn.forEach((item) => {
+      item.addEventListener('click', () => {
+        document.getElementById(`${index}`).remove();
       });
     });
   }
 
   // Add Comments
-  addComment = async (data) => {
+  addComment = async (data, commentId, index) => {
     const response = await fetch(this.INV_API_URL, {
       method: 'POST',
       headers: {
@@ -110,6 +109,7 @@ export default class Meal {
       },
       body: JSON.stringify(data),
     });
+    this.getComment(commentId, index);
     return response;
   }
 
@@ -118,7 +118,7 @@ export default class Meal {
     const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/n9t5YbrpQrNNAecac7tn/comments?item_id=item${index}`);
     const comments = await response.text().catch((error) => new Error(error));
     const commentsData = JSON.parse(comments);
-    if (commentsData !== null) {
+    if (commentsData.error === undefined) {
       this.displayComment(commentsData, commentId);
     }
   }
