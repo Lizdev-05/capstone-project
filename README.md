@@ -14,9 +14,10 @@ Please find project requirements [here](https://github.com/microverseinc/curricu
 ![screenshot](./src/assets/images/meal-screnshot.png)
 
 
-Please take a look at the video below
+## Please take a look at the video below
 <!-- The zoom video -->
-
+[Video Recording](https://drive.google.com/file/d/1fTzlTIVfKIMp4r3HL0fPUA_81b_b5TkL/view?usp=sharing
+)
 ## How it works
 
 The Meal DB web application allows users to like, comment, and make a reservation for their favorite meal.
