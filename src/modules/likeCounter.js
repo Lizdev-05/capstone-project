@@ -4,7 +4,7 @@ const mealContainer = document.querySelector('.meal-cards');
 const likes = () => {
   mealContainer.addEventListener('click', (e) => {
     const clicked = e.target.closest('.like-icon');
-    if (!clicked) return;
+    // if (!clicked) return;
     const item = clicked.getAttribute('id');
     fetch(URL_API, {
       method: 'POST',
