@@ -31,11 +31,11 @@ export default class Meal {
        <div class="card-content">
         <div class="first-part">
          <h2>${data.meals[index].strMeal}</h2>      
-         <span>Order Number: ${data.meals[index].idMeal}</span>
+         <span class="order-num">Order Number: ${data.meals[index].idMeal}</span>
          </div>       
         </div>                     
         <div id="comment${index}"></div>
-        <h2>Add a comment</h2>
+        <h2 class="comment-h2">Add a comment</h2>
         <form id="form${index}">        
         <input type="text" id="name${index}" placeholder="Your name"><br>
         <textarea name="text-area" id="text${index}" class="text-area" placeholder="Your insights" rows="5" maxlength="500" required></textarea><br>
@@ -79,7 +79,8 @@ export default class Meal {
   displayComment = (commentData, commentId) => {
     let commentContainer = '';
     const commentCount = document.createElement('div');
-    commentCount.innerHTML = `Comment(${commentData.length})`;
+    commentCount.className = 'comment-count';
+    commentCount.innerHTML = `Comment (${commentData.length})`;
     commentData.forEach((item) => {
       const commentContent = `      
        <div class="comment-container">${item.creation_date}<br>${item.username}: ${item.comment}</div>     

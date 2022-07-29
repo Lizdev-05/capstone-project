@@ -54,12 +54,32 @@ nav {
 
 .comment-container {
   font-family: cursive, Geneva, Tahoma, sans-serif;
-  background-color: #b2beb5;
-  border: 1px solid  #9b45b2;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  border-radius: 50%;
+  background-color: rgb(1, 41, 59);
+  box-shadow: 5px 5px 10px rgb(43, 73, 100);
+  border: 1px solid rgb(85, 120, 150);
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  border-radius: 3rem;
   text-align: center;
+  color: goldenrod;
+}
+
+.comment-count {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.order-num {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.comment-h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
 }
 
 .right-header,
