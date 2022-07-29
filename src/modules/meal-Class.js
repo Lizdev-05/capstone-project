@@ -82,7 +82,7 @@ export default class Meal {
     commentCount.innerHTML = `Comment(${commentData.length})`;
     commentData.forEach((item) => {
       const commentContent = `      
-       <div>${item.creation_date} ${item.username}: ${item.comment}</div>     
+       <div class="comment-container">${item.creation_date}<br>${item.username}: ${item.comment}</div>     
     `;
       commentContainer += commentContent;
     });
