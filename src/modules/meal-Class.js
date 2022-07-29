@@ -8,7 +8,6 @@ export default class Meal {
 
   // Get meals from Api, throw error if promise was not resoved
   //  otherwise popup meal if comment button is clicked
-
  getMeal = async () => {
    const response = await fetch(this.API_URL);
    const data = await response.json().catch((error) => new Error(error));
@@ -75,7 +74,7 @@ export default class Meal {
       });
     });
   }
-
+// display comment on popup
   displayComment = (commentData, commentId) => {
     let commentContainer = '';
     const commentCount = document.createElement('div');
