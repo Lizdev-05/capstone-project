@@ -11,7 +11,9 @@ Please find project requirements [here](https://github.com/microverseinc/curricu
 
 ## Project presentation
 ## Screenshot
-![screenshot](meal-pic.png)
+![screenshot](./src/assets/images/meal-screnshot.png)
+
+
 Please take a look at the video below
 <!-- The zoom video -->
 
