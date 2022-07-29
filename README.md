@@ -1,3 +1,4 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
 # The Meal DB
 The Meal DB web application displays a list of meals that were provided by an external [API](https://www.themealdb.com/api/json/v1/1/filter.php?a=British). The users can like a meal, leave some comments or make a reservation, in these cases an involvement API was used.
 
@@ -9,6 +10,9 @@ This is the second Microverse capstone project meant to summarize all the conten
 Please find project requirements [here](https://github.com/microverseinc/curriculum-javascript/blob/main/group-capstone/js_capstone.md). 
 
 ## Project presentation
+## Screenshot
+![screenshot](./src/assets/images/meal-screnshot.png)
+
 
 Please take a look at the video below
 <!-- The zoom video -->
@@ -24,7 +28,7 @@ The Meal DB web application allows users to like, comment, and make a reservatio
 
 ## Live Demo
 
-
+[Live demo here](https://lizdev-05.github.io/capstone-project/)
 
 
 ## Getting started
@@ -48,8 +52,8 @@ In order to install a local version of this project and please do the following 
 - Install the latest version of any code editor.
 - install the latest version of GIT.
 - open your terminal
-- Go to the [repository](https://github.com/Lizdev-05/capstone-project)  and clone it with `git clone git@github.com:Behnam1369/Capstone2.git' .
-- open the repository cloned with `cd Capstone2`
+- Go to the [repository](https://github.com/Lizdev-05/capstone-project)  and clone it with `git clone git@github.com/Lizdev-05/capstone-project.git' .
+- open the repository cloned with `cd capstone-project`
 - if your code editor is VsCode type `code .`
 - Install webpack with: `npm install --save-dev webpack webpack-cli`
 - To run it type `nmp run start` or run live server from the docs directory
@@ -68,7 +72,6 @@ In order to install a local version of this project and please do the following 
 - GIT
 
 ## Authors
-
 
 👤 **Ojesanmi Elizabeth Oyin**
 

@@ -10,6 +10,7 @@ import './assets/images/meal3.jpg';
 import './assets/images/meal4.jpg';
 import './assets/images/meal5.jpg';
 import './assets/images/close.svg';
+import './assets/images/meal-screnshot.png';
 
 display();
 likes();
