@@ -70,8 +70,7 @@ export default class Meal {
         };
         const commentString = JSON.stringify(commentData);
         const data = JSON.parse(commentString);
-        this.addComment(data);
-        this.getComment(commentId, index);
+        this.addComment(data, commentId, index);
         formId.reset();
       });
     });
@@ -96,13 +95,13 @@ export default class Meal {
     const closeBtn = document.querySelectorAll('.close');
     closeBtn.forEach((item) => {
       item.addEventListener('click', () => {
-        document.getElementById(`${index}`).remove();       
+        document.getElementById(`${index}`).remove();
       });
     });
   }
 
   // Add Comments
-  addComment = async (data) => {
+  addComment = async (data, commentId, index) => {
     const response = await fetch(this.INV_API_URL, {
       method: 'POST',
       headers: {
@@ -110,6 +109,7 @@ export default class Meal {
       },
       body: JSON.stringify(data),
     });
+    this.getComment(commentId, index);
     return response;
   }
 

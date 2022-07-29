@@ -76,7 +76,11 @@ In order to install a local version of this project and please do the following 
 
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/elizabeth-oyinlade-ojesanmi-0702aa16a)
 
-👤 **
+👤 **Ezea Stephen Nnabuike**
+- GitHub: [@stephnna](https://github.com/stephnna)
+- LinkedIn: [Linkedin](https://www.linkedin.com/in/stephen-nnabuike-ezea-143b97170/)
+- Twitter: [@stephnna](https://twitter.com/stephnna)
+
 
 ## Contributing
 
